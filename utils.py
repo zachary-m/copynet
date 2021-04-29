@@ -20,7 +20,7 @@ def seq_to_string(seq, idx_to_tok, input_tokens=None):
     words = []
     for idx in seq[:seq_length]:
         if idx < vocab_size:
-            words.append(idx_to_tok[idx].item())
+            words.append(idx_to_tok[idx.item()])
         elif input_tokens is not None:
             words.append(input_tokens[idx - vocab_size])
         else:
